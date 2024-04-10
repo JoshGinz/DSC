@@ -2212,11 +2212,13 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.main {
-			display: block;
-			height: 20em;
-			border-radius: 0;
+		div.image.main img {
+			width: 100%;
+			height: auto;
+			object-fit: contain !important; /* Overrides any other object-fit properties */
+			object-position: center !important; /* Overrides any other object-position properties */
 		}
+			
 
 			.image.main img {
 				border-radius: 0;
