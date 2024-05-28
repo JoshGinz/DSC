@@ -2057,7 +2057,7 @@ input, select, textarea {
 		align-items: center;
 		width: 100%;
 		height: auto; /* Adjust as necessary */
-		margin-top: 25px;
+		margin-top: 50%;
 	}
 
 	.banner-image {
