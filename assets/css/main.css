@@ -2212,12 +2212,6 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		div.image.main img {
-			width: 100%;
-			height: auto;
-			object-position: center !important; /* Overrides any other object-position properties */
-		}
-			
 
 
 /* List */
