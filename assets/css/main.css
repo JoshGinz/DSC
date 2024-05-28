@@ -2215,7 +2215,6 @@ input, select, textarea {
 		div.image.main img {
 			width: 100%;
 			height: auto;
-			object-fit: contain !important; /* Overrides any other object-fit properties */
 			object-position: center !important; /* Overrides any other object-position properties */
 		}
 			
