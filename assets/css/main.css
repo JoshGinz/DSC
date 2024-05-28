@@ -2055,13 +2055,13 @@ input, select, textarea {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 150%;
+		width: 100%;
 		height: auto; /* Adjust as necessary */
 		margin-top: 50px;
 	}
 
 	.banner-image {
-		max-width: 100%;
+		max-width: 150%;
 		height: auto;
 	}
 
