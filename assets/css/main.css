@@ -2048,6 +2048,26 @@ input, select, textarea {
 
 /* Image */
 
+
+
+	<style>
+	.image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 300px; /* Adjust height as necessary */
+		background-color: #f0f0f0; /* Optional, for better visualization */
+	}
+
+	.banner-image {
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
+	}
+	</style>
+
+
 	.image {
 		border-radius: 5px;
 		border: 0;
