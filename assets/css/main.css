@@ -2058,15 +2058,14 @@ input, select, textarea {
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: auto; /* Adjust as necessary */
-		margin-top: 50px;
-		margin-bottom: -120px;
+		height: auto;
+		overflow: hidden; /* Add this to hide any overflow */
+		margin-bottom: -6em;
 	}
 
 	.banner-image {
 		max-width: 100%;
 		height: auto;
-		transform: scale(1);
 	}
 
 
