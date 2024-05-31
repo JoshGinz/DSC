@@ -2229,6 +2229,7 @@ input, select, textarea {
 			border-radius: 100%;
 			overflow: hidden;
 			transform: scale(1.3);
+			border: 4px solid black;
 			
 		}
 
@@ -2236,7 +2237,8 @@ input, select, textarea {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
-				transform: scale(1.2);
+				transform: scale(1.52);
+				
 			}
 
 
