@@ -2060,7 +2060,7 @@ input, select, textarea {
 		width: 100%;
 		height: auto;
 		overflow: hidden; /* Add this to hide any overflow */
-		margin-bottom: -1em;
+		margin-bottom: -5%;
 	}
 
 	.banner-image {
