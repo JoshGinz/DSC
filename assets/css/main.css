@@ -1787,13 +1787,15 @@ input, select, textarea {
 	header.major h2 {
 		color: #f9aa57;
 		font-size: 3.5em;
+		text-align: center;
 	}
 
 		header.major h2 + p {
 			color: #777;
 			font-size: 1.75em;
 			font-weight: 700;
-			margin-top: -0.75em;
+			margin-top: -1.2em;
+			text-align: center;
 		}
 
 /* Form */
@@ -2057,7 +2059,8 @@ input, select, textarea {
 		align-items: center;
 		width: 100%;
 		height: auto; /* Adjust as necessary */
-		margin-top: 100px;
+		margin-top: 50px;
+		margin-bottom: -120px;
 	}
 
 	.banner-image {
@@ -2225,12 +2228,15 @@ input, select, textarea {
 		.image.avatar {
 			border-radius: 100%;
 			overflow: hidden;
+			transform: scale(1.3);
+			
 		}
 
 			.image.avatar img {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
+				transform: scale(1.2);
 			}
 
 
@@ -2811,7 +2817,7 @@ input, select, textarea {
 
 			#header > nav ul {
 				list-style: none;
-				margin: 0;
+				margin: 1;
 				padding: 0;
 			}
 
@@ -2915,6 +2921,7 @@ input, select, textarea {
 
 				#header > header {
 					padding: 2em;
+					margin-bottom: -1em;
 				}
 
 				#header > footer {
@@ -2949,6 +2956,7 @@ input, select, textarea {
 
 			#header {
 				width: 20em;
+				margin-bottom: -1em;
 			}
 
 		/* Wrapper */
@@ -3014,6 +3022,7 @@ input, select, textarea {
 				-ms-transform: translateX(23em);
 				transform: translateX(23em);
 				right: 0;
+				margin-bottom: -1em;
 			}
 
 				#header > footer {
@@ -3181,10 +3190,12 @@ input, select, textarea {
 
 			header.major h2 {
 				font-size: 2.5em;
+				
 			}
 
 				header.major h2 + p {
 					font-size: 1.5em;
+					text-align: justify;
 				}
 
 		/* Features */
