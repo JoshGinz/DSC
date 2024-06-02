@@ -1710,6 +1710,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
 		width: 45em;
+		
 	}
 
 		.container.xsmall {
@@ -2076,6 +2077,7 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		margin-bottom: -1em;
 	}
 
 	.image.fit-contain img {
@@ -2683,6 +2685,104 @@ input, select, textarea {
 			cursor: default;
 			opacity: 0.25;
 		}
+
+
+/* Conveyor belt styles */
+.conveyor-belt {
+	overflow: hidden;
+	position: relative;
+	height: 1000px; /* Adjust based on your design, assuming each item is about 300px high */
+  }
+  
+  .features {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	animation: conveyor-animation 36s linear infinite; /* Adjust total duration for smoothness */
+  }
+  
+  @keyframes conveyor-animation {
+	0% { top: 0; } /* Pause at initial position */
+	11.11% { top: 0; } /* Pause at initial position */
+	16.67% { top: -340px; } /* Move to second position */
+	27.78% { top: -340px; } /* Pause at second position */
+	33.33% { top: -680px; } /* Move to third position */
+	44.44% { top: -680px; } /* Pause at third position */
+	50% { top: -1020px; } /* Move to fourth position */
+	61.11% { top: -1020px; } /* Pause at fourth position */
+	66.67% { top: -1360px; } /* Move to fifth position */
+	77.78% { top: -1360px; } /* Pause at fifth position */
+	83.33% { top: -1700px; } /* Move to sixth position */
+	94.44% { top: -1700px; } /* Pause at sixth position */
+	100% { top: 0; } /* Smoothly reset to initial position */
+  }
+  
+  .features article {
+	flex: 0 0 300px; /* Assuming each item is about 300px high */
+	margin-bottom: 20px; /* Space between items */
+	transition: transform 0.5s ease;
+  }
+   
+
+  /* Fix the extra space between the items */
+  .features article:last-child {
+	margin-bottom: 0;
+  }
+  
+  /* Modal styles */
+  .modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0);
+	transition: background-color 0.5s ease;
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	opacity: 0;
+	transform: scale(0.8);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .modal.show {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content.show {
+	opacity: 1;
+	transform: scale(1);
+  }
+  
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  
+		
+
+
 
 /* Features */
 

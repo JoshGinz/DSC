@@ -7,27 +7,68 @@
 (function($) {
 
 	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$titleBar = null,
-		$nav = $('#nav'),
-		$wrapper = $('#wrapper');
+      $body = $('body'),
+      $header = $('#header'),
+      $titleBar = null,
+      $nav = $('#nav'),
+      $wrapper = $('#wrapper');
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '1025px',  '1280px' ],
-			medium:   [ '737px',   '1024px' ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ],
-		});
+  // Breakpoints.
+  breakpoints({
+    xlarge:   [ '1281px',  '1680px' ],
+    large:    [ '1025px',  '1280px' ],
+    medium:   [ '737px',   '1024px' ],
+    small:    [ '481px',   '736px'  ],
+    xsmall:   [ null,      '480px'  ],
+  });
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Play initial animations on page load.
+  $window.on('load', function() {
+    window.setTimeout(function() {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
+
+  // Modals
+  function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    var modalContent = modal.querySelector('.modal-content');
+    modal.classList.add('show');
+    setTimeout(function() {
+      modalContent.classList.add('show');
+    }, 10);
+  }
+
+  function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    var modalContent = modal.querySelector('.modal-content');
+    modalContent.classList.remove('show');
+    setTimeout(function() {
+      modal.classList.remove('show');
+    }, 500); // match this duration with the CSS transition duration
+  }
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function(event) {
+    var modals = document.querySelectorAll('.modal');
+    modals.forEach(function(modal) {
+      if (event.target == modal) {
+        closeModal(modal.id);
+      }
+    });
+  }
+
+  // Add the functions to the global scope so they can be called from HTML
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+
+  // Clone the articles for endless loop effect
+  var features = document.querySelector('.features');
+  for (var i = 0; i < 6; i++) {
+    features.appendChild(features.children[i].cloneNode(true));
+  }
+	  
+	
 
 	// Tweaks/fixes.
 
