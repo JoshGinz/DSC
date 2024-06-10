@@ -2070,7 +2070,15 @@ input, select, textarea {
 	}
 
 
-
+	.image.fit img {
+		object-fit: cover;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 3 / 4;
+		margin-bottom: -2em;
+		margin-top: 2em;
+	}
+	
 
 	.image {
 		border-radius: 5px;
@@ -3213,7 +3221,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #f9aa57;
+						background: #222;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
